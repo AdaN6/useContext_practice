@@ -1,17 +1,20 @@
-
-
+import React from "react"
 import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Content from "./components/content/Content";
 
+export const UserNameContext = React.createContext()
+
 function App() {
   return (
-    <main>
-      <Header />
-      <Content />
-      <Footer />
-    </main>
+    <UserNameContext.Provider value="Admin">
+      <main>
+        <Header />
+        <Content />
+        <Footer />
+      </main>
+    </UserNameContext.Provider>
   );
 }
 
