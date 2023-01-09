@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { UserNameContext } from "../../App";
+import { useUserName } from "../context/UserContext";
 
 const FooterLinks = () => {
-    const userName = useContext(UserNameContext)
+    const userName = useUserName();
 
   return (
     <div className="nav col-md-4 justify-content-end">
